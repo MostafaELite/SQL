@@ -1,0 +1,15 @@
+
+go
+alter Procedure sp_AddandDiff (@FirstNumber int , @SecondNumber int , @Result int output)
+as 
+set @Result = @FirstNumber + @SecondNumber
+Return @FirstNumber - @SecondNumber
+go
+
+Declare @R int 
+Declare @O int
+execute sp_AddandDiff 5,3 ,@Result=@O output
+Print 'I am From OutPut Result , Sum Numbers = ' +  Cast(@O as char)
+execute @R = sp_AddandDiff 5,10,@Result=@O
+Print  'I am From Return Result ,Difference Between Numbers = ' + Cast(@R as char)
+select @R 
