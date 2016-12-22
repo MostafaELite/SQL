@@ -1,0 +1,57 @@
+Create Database ELSo7ab
+go
+Use ELSo7ab 
+go
+
+Create Table [Departments]
+(
+Id int identity not null ,
+Name char(15) primary  key not null ,
+)
+
+Create Table [Students] 
+(
+Id int identity primary key,
+Name char(15) not null ,
+Department char(15)  foreign key references [Departments](name) null  ,
+City char (10) null ,
+JoinDate date null
+)
+go 
+
+create function GetAllFromDep(@DepName char(10) )
+returns int 
+begin 
+Declare @Total as int 
+Select @Total = COUNT(*) From [Students] where Department = @DepName  
+return @Total
+end
+
+go
+
+
+
+alter Table [Departments] add TotalStudents as dbo.GetAllFromDep(Departments.Name) 
+
+
+
+insert into [Departments] Values ('Art'),('Math'),('Science'),('Biology'),('Computer')
+
+insert into [Students] Values 
+('Hazem','Art','Alex','2012/3/25'),
+('Fady','Math','Aswan','2016/10/5'),
+('Adel','Art','Alex','2016/10/5'),
+('N3na3y','Computer','Mahala','2014/1/5'),
+('Mai','Art','Cairo','2015/4/25'),
+('Mostafa','Computer','Cairo','2016/8/15'),
+('Menna','Biology','Cairo','2016/10/5'),
+('Mai','Art','Cairo','2015/10/5'),
+('Hossam','Computer','Cairo','2015/10/5'),
+('Essam','Biology','Alex','2014/1/7'),
+('Asmaa','Biology','Alex','2013/11/4'),
+('Hadeer','Art','Cairo','2015/11/25'),
+('Fathy','Biology','Mansoura','2014/10/15'),
+('Nageb','Computer','Cairo','2016/1/5')
+
+
+
