@@ -1,0 +1,68 @@
+Create database Company
+go
+
+Use Company
+go
+Create Table Employees
+(
+  EmpId int Identity ,
+  EmpName char(50) not null ,
+  Department char(10) not null,
+  Salary Money ,
+  City char(10),
+  HireDate DateTime
+)
+
+Create Table Departments
+(
+  DepId int Identity ,
+  DepName char(10) not null ,
+  MangerName char (50)   
+)
+
+Create Table Students 
+(
+  StudentId int Identity ,
+  StudentName char(50) not null ,
+  Department char(10) not null,
+  City char(10),
+  JoinDate DateTime
+)
+
+Insert into [Employees] 
+Values
+('Ahmed','Sales',2000,'Alex','2014/7/8'),
+('Ramy','Opreations',1500,'Cairo','2014/4/25'),
+('Ali','Computer',3000,'Cairo','2016/8/4'),
+('Samy','Sales',2000,'Aswan','2015/4/418'),
+('Mai','HR',1500 ,'Cairo','2015/9/16'),
+('Ramy','Opreations',1500,'Cairo','2014/4/25'),
+('Mostafa','Computer',3000,'Cairo','2016/8/4'),
+('Fady','Sales',2000,'Cairo','2011/1/4'),
+('Nada','HR',1500 ,'Alex','2015/9/16'),
+('Hossam','Computer',3000,'Cairo','2011/11/5'),
+('Mayada','Opreations',1500,'Alex','2013/4/2'),
+('N3na3y','Computer',3000,'Cairo','1990/1/23'),
+('Hazem','Opreations',1500,'Aswan','2015/6/8'),
+('Nada','Sales',2000,'Mansoura','2015/6/27'),
+('Esraa','HR',1500 ,'Alex','2015/9/16'),
+('Nageb','Computer',3000,'Cairo','2012/2/15')
+
+Insert into [Employees] 
+Values 
+('Sales','Essam Abd EL Fatah'),
+('Opreations','Adel EL Mahdy'),
+('Computer','3abkreno'),
+('HR','Ranya Khatab')
+
+
+Insert into [Students] 
+Values
+('Haytham','Art','Aswan','2015/6/8'),
+('Gamal','Math','Mansoura','2015/6/27'),
+('Fathy','Math','Alex','2015/9/16'),
+('Yasser','Art','Cairo','2012/2/15') ,
+('Hazem','Biology','Aswan','2015/6/8'),
+('Khaled','Commerce','Mansoura','2015/6/27'),
+('Waled','Art' ,'Alex','2015/9/16'),
+('Soliman','Commerce','Cairo','2012/2/15')
