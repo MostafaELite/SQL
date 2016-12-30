@@ -46,7 +46,11 @@ Values
 ('Hazem','Opreations',1500,'Aswan','2015/6/8'),
 ('Nada','Sales',2000,'Mansoura','2015/6/27'),
 ('Esraa','HR',1500 ,'Alex','2015/9/16'),
-('Nageb','Computer',3000,'Cairo','2012/2/15')
+('Nageb','Computer',3000,'Cairo','2012/2/15'),
+('Essam Abd EL Fatah','Sales',10000,'Cairo','2000/1/7'),
+('Adel EL Mahdy','Opreations',10000,'Cairo','2000/2/4'),
+('3abkreno','Computer',10000,'Cairo','2000/5/11'),
+('Ranya Khatab','HR',10000,'Cairo','2000/4/22')
 
 Insert into [Departments] 
 Values 
